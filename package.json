@@ -1,0 +1,40 @@
+{
+  "name": "sms",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "debug": "nodemon --inspect",
+    "db:create": "createdb --echo sms_dev",
+    "db:migrate": "node db/migration.js",
+    "db:drop": "dropdb --echo --if-exists sms_dev",
+    "db:reset": "npm run db:drop && npm run db:create && npm run db:migrate"
+  },
+  "dependencies": {
+    "bcrypt": "^2.0.0",
+    "body-parser": "^1.18.2",
+    "connect-session-knex": "^1.4.0",
+    "cookie-parser": "~1.4.3",
+    "dateformat": "^3.0.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "express": "~4.16.0",
+    "express-paginate": "^0.3.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.1.2",
+    "flash": "^1.1.0",
+    "http-errors": "~1.6.2",
+    "knex": "^0.14.6",
+    "method-override": "^2.3.10",
+    "morgan": "~1.9.0",
+    "multer": "^1.3.0",
+    "pg": "^7.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  },
+  "optionalDependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
